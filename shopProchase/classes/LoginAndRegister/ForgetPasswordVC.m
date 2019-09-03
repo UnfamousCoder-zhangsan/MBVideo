@@ -9,6 +9,11 @@
 #import "ForgetPasswordVC.h"
 
 @interface ForgetPasswordVC ()
+@property (weak, nonatomic) IBOutlet UIView *phoneView;
+@property (weak, nonatomic) IBOutlet UIView *passwordcodeView;
+@property (weak, nonatomic) IBOutlet UITextField *textfieldPhone;
+@property (weak, nonatomic) IBOutlet UITextField *textfieldCode;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
 
 @end
 
@@ -17,6 +22,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.phoneView.layer.cornerRadius = 45/2;
+    self.phoneView.layer.borderColor = [[UIColor colorWithHexString:@"#CDCDCD"]CGColor];
+    self.phoneView.layer.borderWidth = 1;
+    
+    self.passwordcodeView.layer.cornerRadius = 45/2;
+    self.passwordcodeView.layer.borderColor = [[UIColor colorWithHexString:@"#CDCDCD"]CGColor];
+    self.passwordcodeView.layer.borderWidth = 1;
+    
+    self.nextButton.layer.cornerRadius = 45/2;
+    self.nextButton.layer.masksToBounds = YES;
+    
 }
 
 /*
