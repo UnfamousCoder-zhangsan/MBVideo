@@ -1,0 +1,6 @@
+framework module Pods_shopProchase {
+  umbrella header "Pods-shopProchase-umbrella.h"
+
+  export *
+  module * { export * }
+}

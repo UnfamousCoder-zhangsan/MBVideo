@@ -1,0 +1,29 @@
+//
+//  PrefixHeader.pch
+//  shopProchase
+//
+//  Created by hi  kobe on 2019/8/15.
+//  Copyright © 2019 hi  kobe. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "Header.h"
+#import "AlertUtils.h"
+#import "ZZStringSize.h"
+#import "LoginViewController.h"
+#import "MainTabBarViewController.h"
+#import "UINavigationController+FDFullscreenPopGesture.h"
+#import "UIColor+Hex.h"
+#import "KBSysAlertUtil.h"
+#import "Masonry.h"
+#import "GKPageTableView.h"
+#import "GKPageListContainerView.h"
+#import "GKPageScrollView.h"
+#import "NSObject+MBCategory.h"
+#import <GKNavigationBarViewController/GKNavigationBarViewController.h>
+//#import "MainViewController.h"
+
+
+#endif /* PrefixHeader_pch */

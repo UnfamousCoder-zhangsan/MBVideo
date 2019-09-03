@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CountViewController">
+            <connections>
+                <outlet property="clearButton" destination="QJB-7A-qNv" id="5ey-VH-egS"/>
+                <outlet property="countTextField" destination="urQ-67-du8" id="0ak-zT-CnH"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="修改账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JnA-kb-QcS">
+                    <rect key="frame" x="10" y="98" width="65.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="记得填写账号哦" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="urQ-67-du8">
+                    <rect key="frame" x="10" y="132.5" width="369" height="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJB-7A-qNv">
+                    <rect key="frame" x="384" y="131" width="20" height="20"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="20" id="YYd-vV-LQW"/>
+                        <constraint firstAttribute="height" constant="20" id="gPf-2j-Idg"/>
+                    </constraints>
+                    <state key="normal" image="clearButton"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6eZ-cO-eNZ">
+                    <rect key="frame" x="10" y="159.5" width="394" height="1"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="mUv-cz-qoW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最多16个字，只允许包含字母、数字、下划线和点，30天内仅能修改改一次" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="niV-W3-lip">
+                    <rect key="frame" x="10" y="170.5" width="394" height="33.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="niV-W3-lip" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="1VU-LH-JHx"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="6eZ-cO-eNZ" secondAttribute="trailing" constant="10" id="3js-JR-8ga"/>
+                <constraint firstItem="6eZ-cO-eNZ" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="5Kw-s4-Skk"/>
+                <constraint firstItem="JnA-kb-QcS" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="54" id="Ag2-Eu-h80"/>
+                <constraint firstItem="urQ-67-du8" firstAttribute="top" secondItem="JnA-kb-QcS" secondAttribute="bottom" constant="15" id="EhY-Ba-TUy"/>
+                <constraint firstItem="JnA-kb-QcS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="HgP-Yh-LV0"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="niV-W3-lip" secondAttribute="trailing" constant="10" id="OJ3-3E-cO1"/>
+                <constraint firstItem="urQ-67-du8" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="QeT-zK-rDI"/>
+                <constraint firstItem="QJB-7A-qNv" firstAttribute="leading" secondItem="urQ-67-du8" secondAttribute="trailing" constant="5" id="X7w-Ts-Umx"/>
+                <constraint firstItem="QJB-7A-qNv" firstAttribute="centerY" secondItem="urQ-67-du8" secondAttribute="centerY" id="qcM-sa-D3B"/>
+                <constraint firstItem="6eZ-cO-eNZ" firstAttribute="top" secondItem="urQ-67-du8" secondAttribute="bottom" constant="10" id="wJY-Lp-Dp2"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="QJB-7A-qNv" secondAttribute="trailing" constant="10" id="wvg-3h-H2W"/>
+                <constraint firstItem="niV-W3-lip" firstAttribute="top" secondItem="6eZ-cO-eNZ" secondAttribute="bottom" constant="10" id="zz2-9J-vGF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="157" y="66"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="clearButton" width="20" height="20"/>
+    </resources>
+</document>

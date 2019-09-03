@@ -1,0 +1,11 @@
+${PODS_ROOT}/Target Support Files/Pods-shopProchase/Pods-shopProchase-resources.sh
+${PODS_ROOT}/BRPickerView/BRPickerView/AddressPickerView/BRPickerView.bundle
+${PODS_ROOT}/GKNavigationBarViewController/GKNavigationBarViewController/GKNavigationBarViewController.bundle
+${PODS_ROOT}/GKPhotoBrowser/GKPhotoBrowser/GKPhotoBrowser.bundle
+${PODS_ROOT}/IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle
+${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle
+${PODS_ROOT}/SGQRCode/SGQRCode/SGQRCode.bundle
+${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle
+${PODS_ROOT}/TZImagePickerController/TZImagePickerController/TZImagePickerController/TZImagePickerController.bundle
+${PODS_ROOT}/UMCCommonLog/UMCommonLog/UMCommonLog.bundle
+${PODS_ROOT}/UMCShare/UMShare/UMSocialUI/UMSocialSDKResources.bundle
