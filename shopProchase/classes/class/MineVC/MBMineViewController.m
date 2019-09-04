@@ -37,8 +37,13 @@
 
 @implementation MBMineViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     self.gk_navBarAlpha = 0;
     self.gk_navBackgroundColor = [UIColor colorWithHexString:@"161822"];
@@ -56,6 +61,7 @@
     }];
     [self.gk_navigationBar addSubview:self.menuButton];
     
+    //不能在这里刷新 返回时会闪动
     [self.pageScrollView reloadData];
     
     

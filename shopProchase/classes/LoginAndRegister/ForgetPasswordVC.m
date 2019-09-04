@@ -7,6 +7,7 @@
 //
 
 #import "ForgetPasswordVC.h"
+#import "SettingPasswoedVC.h"
 
 @interface ForgetPasswordVC ()
 @property (weak, nonatomic) IBOutlet UIView *phoneView;
@@ -14,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *textfieldPhone;
 @property (weak, nonatomic) IBOutlet UITextField *textfieldCode;
 @property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *getCodeButton;
 
 @end
 
@@ -34,15 +36,22 @@
     self.nextButton.layer.masksToBounds = YES;
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)countdownButotn:(UIButton *)sender {
+    [AlertUtils error:@"或取验证码"];
 }
-*/
+- (IBAction)colseButton:(UIButton *)sender {
+    
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
+- (IBAction)nextButton:(UIButton *)sender {
+    SettingPasswoedVC *settingVC = [[SettingPasswoedVC alloc] init];
+    [self presentViewController:settingVC animated:YES completion:^{
+        
+    }];
+}
 
 @end

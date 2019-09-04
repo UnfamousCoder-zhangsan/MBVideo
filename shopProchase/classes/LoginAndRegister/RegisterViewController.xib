@@ -12,6 +12,13 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController">
             <connections>
+                <outlet property="agreeButton" destination="qbZ-ki-x8a" id="d0x-e2-AA2"/>
+                <outlet property="codeButton" destination="nD5-Pj-4fq" id="06p-5P-hWE"/>
+                <outlet property="codeView" destination="vpS-eu-YWW" id="hP1-ey-9v3"/>
+                <outlet property="nextButton" destination="Xyx-V1-5PA" id="ynd-k4-HOC"/>
+                <outlet property="phoneView" destination="MP6-Dc-WGL" id="rGx-6H-Ynr"/>
+                <outlet property="textfieldCode" destination="sXY-TF-PrT" id="Dnp-EJ-AkE"/>
+                <outlet property="textfieldPhone" destination="Je6-s9-qCg" id="enP-A3-0sR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,10 +34,13 @@
                         <constraint firstAttribute="width" constant="30" id="vtf-3J-eqo"/>
                     </constraints>
                     <state key="normal" image="leftImage"/>
+                    <connections>
+                        <action selector="closeButton:" destination="-1" eventType="touchUpInside" id="Pa5-W4-UNA"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="新用户注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMz-88-5Ir">
-                    <rect key="frame" x="163.5" y="68.5" width="87" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <rect key="frame" x="161" y="68.5" width="92" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
@@ -45,19 +55,23 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD5-Pj-4fq">
-                            <rect key="frame" x="260" y="7.5" width="80" height="30"/>
+                            <rect key="frame" x="260" y="9" width="80" height="27"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="80" id="Arr-Iu-w6y"/>
                             </constraints>
-                            <state key="normal">
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <state key="normal" title="获取验证码">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="codeButtonClick:" destination="-1" eventType="touchUpInside" id="ERb-Qz-FFC"/>
+                            </connections>
                         </button>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Je6-s9-qCg">
                             <rect key="frame" x="50" y="12.5" width="189" height="20"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                         </textField>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKY-3J-zFO">
                             <rect key="frame" x="249" y="10" width="1" height="25"/>
@@ -100,7 +114,7 @@
                             <rect key="frame" x="50" y="12.5" width="292" height="20"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad" secureTextEntry="YES"/>
                         </textField>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -122,6 +136,9 @@
                     <state key="normal" title="下一步">
                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </state>
+                    <connections>
+                        <action selector="nextButton:" destination="-1" eventType="touchUpInside" id="2El-P2-RFO"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbZ-ki-x8a">
                     <rect key="frame" x="27" y="350.5" width="30" height="30"/>
@@ -131,10 +148,16 @@
                     </constraints>
                     <state key="normal" image="checkGray"/>
                     <state key="selected" image="checkBule"/>
+                    <connections>
+                        <action selector="agreeButton:" destination="-1" eventType="touchUpInside" id="zbF-ax-RnD"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFr-UI-SKJ">
                     <rect key="frame" x="180" y="350.5" width="123" height="30"/>
                     <state key="normal" title="《用户使用协议》"/>
+                    <connections>
+                        <action selector="userProBtn:" destination="-1" eventType="touchUpInside" id="Eus-T1-eTM"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已阅读，并接受" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LaC-EY-MGo">
                     <rect key="frame" x="65" y="356.5" width="115" height="18"/>

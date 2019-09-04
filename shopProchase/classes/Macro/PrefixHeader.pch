@@ -10,6 +10,12 @@
 #define PrefixHeader_pch
 
 #import "Header.h"
+#import <AFNetworking.h>
+#import "UserHelpClass.h"
+#import "Masonry.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "MainTabBarViewController.h"
 #import "AlertUtils.h"
 #import "ZZStringSize.h"
 #import "LoginViewController.h"

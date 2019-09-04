@@ -62,6 +62,8 @@
 		311DDF5C231CF7900005A248 /* CountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 311DDF5A231CF7900005A248 /* CountViewController.xib */; };
 		311DDF60231CF7CA0005A248 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 311DDF5E231CF7CA0005A248 /* ProfileViewController.m */; };
 		311DDF61231CF7CA0005A248 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 311DDF5F231CF7CA0005A248 /* ProfileViewController.xib */; };
+		3123B18B231FB1FC008DFDFB /* UserHelpClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 3123B18A231FB1FC008DFDFB /* UserHelpClass.m */; };
+		3123B18F231FB2B1008DFDFB /* PersonMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3123B18E231FB2B1008DFDFB /* PersonMessageModel.m */; };
 		31507692231E3A48000900B2 /* newsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31507690231E3A48000900B2 /* newsTableViewCell.m */; };
 		31507693231E3A48000900B2 /* newsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31507691231E3A48000900B2 /* newsTableViewCell.xib */; };
 		31507696231E461D000900B2 /* AlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 31507695231E461D000900B2 /* AlertUtils.m */; };
@@ -186,6 +188,10 @@
 		311DDF5D231CF7CA0005A248 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		311DDF5E231CF7CA0005A248 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		311DDF5F231CF7CA0005A248 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		3123B189231FB1FC008DFDFB /* UserHelpClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserHelpClass.h; sourceTree = "<group>"; };
+		3123B18A231FB1FC008DFDFB /* UserHelpClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserHelpClass.m; sourceTree = "<group>"; };
+		3123B18D231FB2B1008DFDFB /* PersonMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PersonMessageModel.h; sourceTree = "<group>"; };
+		3123B18E231FB2B1008DFDFB /* PersonMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PersonMessageModel.m; sourceTree = "<group>"; };
 		3150768F231E3A48000900B2 /* newsTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = newsTableViewCell.h; sourceTree = "<group>"; };
 		31507690231E3A48000900B2 /* newsTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = newsTableViewCell.m; sourceTree = "<group>"; };
 		31507691231E3A48000900B2 /* newsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newsTableViewCell.xib; sourceTree = "<group>"; };
@@ -304,6 +310,8 @@
 				31191578230529C0006B15E9 /* ZZStringSize.m */,
 				31507694231E461D000900B2 /* AlertUtils.h */,
 				31507695231E461D000900B2 /* AlertUtils.m */,
+				3123B189231FB1FC008DFDFB /* UserHelpClass.h */,
+				3123B18A231FB1FC008DFDFB /* UserHelpClass.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -379,6 +387,7 @@
 		311915642304FD7E006B15E9 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
+				3123B18C231FB295008DFDFB /* model */,
 				3119159523055BBD006B15E9 /* SettingVC */,
 				3119159423055BB4006B15E9 /* ChangePassword */,
 				3119159623055BC6006B15E9 /* View */,
@@ -564,6 +573,15 @@
 				311DDF5F231CF7CA0005A248 /* ProfileViewController.xib */,
 			);
 			path = PersionMessage;
+			sourceTree = "<group>";
+		};
+		3123B18C231FB295008DFDFB /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3123B18D231FB2B1008DFDFB /* PersonMessageModel.h */,
+				3123B18E231FB2B1008DFDFB /* PersonMessageModel.m */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 		3150768D231E3A18000900B2 /* model */ = {
@@ -791,12 +809,14 @@
 				311DDF4B231CA2CA0005A248 /* homeFocusViewController.m in Sources */,
 				3119157D23052D41006B15E9 /* LoginViewController.m in Sources */,
 				311915262304F8A7006B15E9 /* ViewController.m in Sources */,
+				3123B18F231FB2B1008DFDFB /* PersonMessageModel.m in Sources */,
 				311DDF60231CF7CA0005A248 /* ProfileViewController.m in Sources */,
 				3119D85E2318F40500D95F24 /* mineListCollectionViewCell.m in Sources */,
 				18A2FBAD231E9004005BE75B /* SettingPasswoedVC.m in Sources */,
 				3119D8672319009A00D95F24 /* MBCollectionReusableView.m in Sources */,
 				311BEFBD230F99B500E9C64B /* FirstCollectionViewCell.m in Sources */,
 				3119D0F8230A3E45002AF322 /* SettingViewController.m in Sources */,
+				3123B18B231FB1FC008DFDFB /* UserHelpClass.m in Sources */,
 				311915A823057176006B15E9 /* personTableViewCell.m in Sources */,
 				3119D85A2318EFDD00D95F24 /* MBCollectionViewController.m in Sources */,
 				311CEB792317B39400D33899 /* MBListViewController.m in Sources */,

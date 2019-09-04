@@ -7,8 +7,17 @@
 //
 
 #import "RegisterViewController.h"
+#import "SettingPasswoedVC.h"
 
 @interface RegisterViewController ()
+
+@property (weak, nonatomic) IBOutlet UIView *phoneView;
+@property (weak, nonatomic) IBOutlet UIView *codeView;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;
+@property (weak, nonatomic) IBOutlet UIButton *agreeButton;
+@property (weak, nonatomic) IBOutlet UIButton *codeButton;
+@property (weak, nonatomic) IBOutlet UITextField *textfieldPhone;
+@property (weak, nonatomic) IBOutlet UITextField *textfieldCode;
 
 @end
 
@@ -17,16 +26,49 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.phoneView.layer.cornerRadius = 45 / 2;
+    self.phoneView.layer.masksToBounds = YES;
+    self.phoneView.layer.borderWidth = 1;
+    self.phoneView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.codeView.layer.cornerRadius = 45 / 2;
+    self.codeView.layer.masksToBounds = YES;
+    self.codeView.layer.borderWidth  = 1;
+    self.codeView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.nextButton.layer.cornerRadius = 45 / 2;
+    self.nextButton.layer.masksToBounds = YES;
+}
+- (IBAction)codeButtonClick:(UIButton *)sender {
+    [AlertUtils error:@"获取验证码"];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)nextButton:(UIButton *)sender {
+    
+    SettingPasswoedVC *settingVC = [[SettingPasswoedVC alloc] init];
+    [self presentViewController:settingVC animated:YES completion:^{
+        
+    }];
 }
-*/
+- (IBAction)closeButton:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
+}
+
+
+- (IBAction)userProBtn:(UIButton *)sender {
+    
+    
+}
+- (IBAction)agreeButton:(UIButton *)sender {
+    if (sender.selected == YES) {
+        sender.selected = NO;
+    } else {
+        sender.selected = YES;
+    }
+}
+
+
 
 @end

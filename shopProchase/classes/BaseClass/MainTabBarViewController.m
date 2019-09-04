@@ -48,11 +48,14 @@
     NSString *title = viewController.tabBarItem.title;
     if (![title isEqualToString:@"首页"]) {
         //判断是否登录
-        self.bgView.backgroundColor = [UIColor colorWithHexString:@"#161823"];
+        //[self isLoginView];
+       self.bgView.backgroundColor = [UIColor colorWithHexString:@"#161823"];
+        return YES;
     }else{
         //设置为透明
         self.bgView.backgroundColor = [UIColor clearColor];
         self.tabBar.backgroundImage = [self imageWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
+        return YES;
     }
     
     return YES;

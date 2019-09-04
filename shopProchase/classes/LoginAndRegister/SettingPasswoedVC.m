@@ -9,6 +9,11 @@
 #import "SettingPasswoedVC.h"
 
 @interface SettingPasswoedVC ()
+@property (weak, nonatomic) IBOutlet UIView *settingPasswordView;
+@property (weak, nonatomic) IBOutlet UIView *againpasswordView;
+@property (weak, nonatomic) IBOutlet UITextField *textfieldAgain;
+@property (weak, nonatomic) IBOutlet UITextField *textfieldSetting;
+@property (weak, nonatomic) IBOutlet UIButton *sucessButton;
 
 @end
 
@@ -17,6 +22,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.settingPasswordView.layer.cornerRadius = 45 / 2;
+    self.settingPasswordView.layer.masksToBounds = YES;
+    self.settingPasswordView.layer.borderWidth = 1;
+    self.settingPasswordView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.againpasswordView.layer.cornerRadius = 45 / 2;
+    self.againpasswordView.layer.masksToBounds = YES;
+    self.againpasswordView.layer.borderWidth  = 1;
+    self.againpasswordView.layer.borderColor = [UIColor grayColor].CGColor;
+    
+    self.sucessButton.layer.cornerRadius = 45 / 2;
+    self.sucessButton.layer.masksToBounds = YES;
+}
+- (IBAction)successButton:(UIButton *)sender {
+    
+}
+- (IBAction)colseButton:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:^{
+        
+    }];
 }
 
 /*
