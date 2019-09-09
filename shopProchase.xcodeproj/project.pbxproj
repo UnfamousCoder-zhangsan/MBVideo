@@ -67,6 +67,8 @@
 		31507692231E3A48000900B2 /* newsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 31507690231E3A48000900B2 /* newsTableViewCell.m */; };
 		31507693231E3A48000900B2 /* newsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31507691231E3A48000900B2 /* newsTableViewCell.xib */; };
 		31507696231E461D000900B2 /* AlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 31507695231E461D000900B2 /* AlertUtils.m */; };
+		31739CB923265E9A00026A1B /* MBDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31739CB823265E9A00026A1B /* MBDrawerViewController.m */; };
+		31739CBC23265FD800026A1B /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31739CBB23265FD800026A1B /* MenuViewController.m */; };
 		9B1CABC40E2D27E8E16651F8 /* libPods-shopProchase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E49C5516F4108E618744402 /* libPods-shopProchase.a */; };
 /* End PBXBuildFile section */
 
@@ -197,6 +199,10 @@
 		31507691231E3A48000900B2 /* newsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = newsTableViewCell.xib; sourceTree = "<group>"; };
 		31507694231E461D000900B2 /* AlertUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AlertUtils.h; sourceTree = "<group>"; };
 		31507695231E461D000900B2 /* AlertUtils.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlertUtils.m; sourceTree = "<group>"; };
+		31739CB723265E9A00026A1B /* MBDrawerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBDrawerViewController.h; sourceTree = "<group>"; };
+		31739CB823265E9A00026A1B /* MBDrawerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBDrawerViewController.m; sourceTree = "<group>"; };
+		31739CBA23265FD800026A1B /* MenuViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		31739CBB23265FD800026A1B /* MenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		78A5924C682E1F4C4743D38E /* Pods-shopProchase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopProchase.release.xcconfig"; path = "Target Support Files/Pods-shopProchase/Pods-shopProchase.release.xcconfig"; sourceTree = "<group>"; };
 		7E49C5516F4108E618744402 /* libPods-shopProchase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-shopProchase.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDD5A0637FB1C6E48099559C /* Pods-shopProchase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-shopProchase.debug.xcconfig"; path = "Target Support Files/Pods-shopProchase/Pods-shopProchase.debug.xcconfig"; sourceTree = "<group>"; };
@@ -387,6 +393,7 @@
 		311915642304FD7E006B15E9 /* MineVC */ = {
 			isa = PBXGroup;
 			children = (
+				31739CB623265E8200026A1B /* DrawerViewController */,
 				3123B18C231FB295008DFDFB /* model */,
 				3119159523055BBD006B15E9 /* SettingVC */,
 				3119159423055BB4006B15E9 /* ChangePassword */,
@@ -599,6 +606,17 @@
 				31507691231E3A48000900B2 /* newsTableViewCell.xib */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		31739CB623265E8200026A1B /* DrawerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				31739CB723265E9A00026A1B /* MBDrawerViewController.h */,
+				31739CB823265E9A00026A1B /* MBDrawerViewController.m */,
+				31739CBA23265FD800026A1B /* MenuViewController.h */,
+				31739CBB23265FD800026A1B /* MenuViewController.m */,
+			);
+			path = DrawerViewController;
 			sourceTree = "<group>";
 		};
 		4E52C3BB2838F67369B9696A /* Pods */ = {
@@ -831,10 +849,12 @@
 				311CEB732317A25100D33899 /* MBTableViewController.m in Sources */,
 				3119D87423190B0700D95F24 /* mineListTableViewCell.m in Sources */,
 				3119159323054608006B15E9 /* MianNavigationViewController.m in Sources */,
+				31739CB923265E9A00026A1B /* MBDrawerViewController.m in Sources */,
 				31507696231E461D000900B2 /* AlertUtils.m in Sources */,
 				3119D106230A87C9002AF322 /* KBSysAlertUtil.m in Sources */,
 				311DDF48231CA29C0005A248 /* homeCityViewController.m in Sources */,
 				31191590230544C2006B15E9 /* MainTabBarViewController.m in Sources */,
+				31739CBC23265FD800026A1B /* MenuViewController.m in Sources */,
 				18A2FBA8231E8FD7005BE75B /* RegisterViewController.m in Sources */,
 				3119158A23053050006B15E9 /* MessageViewController.m in Sources */,
 				311CEB7F2317C89D00D33899 /* NSObject+MBCategory.m in Sources */,

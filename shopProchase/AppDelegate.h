@@ -8,10 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MBDrawerViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, strong, readonly) MBDrawerViewController *drawerVC;
 
 @end
 

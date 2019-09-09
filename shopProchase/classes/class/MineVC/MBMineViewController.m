@@ -16,7 +16,10 @@
 #import "UIViewController+GKCategory.h"
 #import "JXCategoryView.h"
 
-@interface MBMineViewController ()<GKPageScrollViewDelegate,UIScrollViewDelegate,JXCategoryViewDelegate>
+#import "AppDelegate.h"
+#import "MBDrawerViewController.h"
+
+@interface MBMineViewController ()<GKPageScrollViewDelegate,UIScrollViewDelegate,JXCategoryViewDelegate,MBDrawerViewControllerDelegate>
 
 @property (nonatomic, strong) GKPageScrollView      *pageScrollView;
 
@@ -241,9 +244,30 @@
         _menuButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 50, 20, 40, 40)];
         //[_menuButton setTitle:@"菜单" forState:UIControlStateNormal];
         [_menuButton setImage:[UIImage imageNamed:@"menuBtn"] forState:UIControlStateNormal];
+        [_menuButton addTarget:self action:@selector(didClickRightItem:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _menuButton;
 }
+
+static BOOL show = NO;
+- (void)didClickRightItem:(id)sender{
+    AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
+    if (!show) {
+        [appDelegate.drawerVC presentMenuViewController];
+    } else {
+        [appDelegate.drawerVC dismissMenuViewController];
+    }
+    show = !show;
+}
+#pragma mark - PDDrawerViewControllerDelegate
+- (void)menuDidAppear {
+    show = YES;
+}
+
+- (void)menuDidDisappear {
+    show = NO;
+}
+
 
 //状态栏
 -(BOOL)prefersStatusBarHidden{
