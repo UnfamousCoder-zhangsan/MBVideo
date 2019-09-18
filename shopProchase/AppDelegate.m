@@ -26,16 +26,16 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    MBMineViewController *mainPage = [[MBMineViewController alloc] init];
-    MenuViewController   *menuPage = [[MenuViewController    alloc] init];
-    
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainPage];
-    
-    _drawerVC = [[MBDrawerViewController alloc] initWithMainViewController:navigationController menuViewController:menuPage];
-    self.window.rootViewController = self.drawerVC;
-    
-    [self.drawerVC bind:self];
-    [self.drawerVC bind:mainPage];
+//    MBMineViewController *mainPage = [[MBMineViewController alloc] init];
+//    MenuViewController   *menuPage = [[MenuViewController    alloc] init];
+//    
+//    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainPage];
+//    
+//    _drawerVC = [[MBDrawerViewController alloc] initWithMainViewController:navigationController menuViewController:menuPage];
+//    self.window.rootViewController = self.drawerVC;
+//    
+//    [self.drawerVC bind:self];
+//    [self.drawerVC bind:mainPage];
     
     return YES;
 }
