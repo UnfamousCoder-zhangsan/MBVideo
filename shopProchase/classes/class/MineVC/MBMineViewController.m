@@ -65,6 +65,7 @@
     [self.gk_navigationBar addSubview:self.menuButton];
     
     //不能在这里刷新 返回时会闪动
+    //优化解决 刷新机制 不能在此刷新
     [self.pageScrollView reloadData];
     
     
@@ -267,7 +268,6 @@ static BOOL show = NO;
 - (void)menuDidDisappear {
     show = NO;
 }
-
 
 //状态栏
 -(BOOL)prefersStatusBarHidden{

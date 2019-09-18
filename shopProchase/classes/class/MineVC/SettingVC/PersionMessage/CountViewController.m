@@ -10,7 +10,7 @@
 
 @interface CountViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *clearButton;
-//@property (strong, nonatomic) UIButton *rightButton;
+@property (strong, nonatomic) UIButton *rightButton;
 
 @end
 
@@ -27,13 +27,16 @@
     UIBarButtonItem *leftItem= [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"whiteleft"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStyleDone target:self action:@selector(backbuttonPressed)];
     self.gk_navLeftBarButtonItem = leftItem;
     
-//    self.rightButton = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - 45, 0, 50, 30)];
-
-    UIBarButtonItem *rightItem = [[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(rightClick)];
-    UIBarButtonItem *spacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    spacer.width = 20;
-    self.gk_navRightBarButtonItems = @[spacer,rightItem];
-   // self.gk_navRightBarButtonItem = rightItem;
+    self.rightButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 70, 30)];
+    [self.rightButton setTitle:@"保存" forState:UIControlStateNormal];
+    [self.rightButton setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
+    [self.rightButton addTarget:self action:@selector(rightClick) forControlEvents:UIControlEventTouchUpInside];
+    
+    //修改状态颜色
+    self.rightButton.userInteractionEnabled = NO;
+    self.rightButton.alpha = 0.2;
+    
+    self.gk_navRightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightButton];
     [self.gk_navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithHexString:@"FFFFFF"],
                                                     NSFontAttributeName : [UIFont systemFontOfSize:17]}];
     self.gk_navBackgroundColor = [UIColor colorWithHexString:@"282a34"];
@@ -75,6 +78,9 @@
 
 - (void)textChanged:(UITextField *)textField{
     NSLog(@"%@",textField.text);
+    
+    self.rightButton.userInteractionEnabled = YES;
+    self.rightButton.alpha = 0.9;
     
     if ([textField.text isEqualToString:@""]) {
         self.clearButton.hidden = YES;

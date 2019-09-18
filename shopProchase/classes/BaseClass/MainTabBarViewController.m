@@ -15,21 +15,37 @@
 
 @implementation MainTabBarViewController
 
-+(void)initialize{
-//    //    //设置tabbar 的字体大小
+
+//load 与 initialize调用时机不同
+
+//+(void)initialize{
+////    //    //设置tabbar 的字体大小
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#778899"],NSFontAttributeName:[UIFont systemFontOfSize:15]}  forState:UIControlStateNormal];
+//
+//        NSDictionary *textTitleOptions = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#F8F8FF"],NSFontAttributeName:[UIFont systemFontOfSize:17]};
+//        [[UITabBarItem appearance] setTitleTextAttributes:textTitleOptions  forState:UIControlStateSelected];
+//  //  [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -TabBarHeight / 2 + 10)];
+//}
+
++ (void)load{
     [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#778899"],NSFontAttributeName:[UIFont systemFontOfSize:15]}  forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#F8F8FF"],NSFontAttributeName:[UIFont systemFontOfSize:17]}  forState:UIControlStateSelected];
     
-    [[UITabBarItem appearance] setTitlePositionAdjustment:UIOffsetMake(0, -TabBarHeight / 2 + 10)];
+    NSDictionary *textTitleOptions = @{NSForegroundColorAttributeName:[UIColor colorWithHexString:@"#F8F8FF"],NSFontAttributeName:[UIFont systemFontOfSize:17]};
+    [[UITabBarItem appearance] setTitleTextAttributes:textTitleOptions  forState:UIControlStateSelected];
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    //声明代理
     self.delegate = self;
     //修改tabbar的背景颜色
     self.bgView = [[UIView alloc] initWithFrame:self.tabBar.bounds];
     self.bgView.backgroundColor = [UIColor clearColor];
     [self.tabBar insertSubview:self.bgView atIndex:0];
+    self.selectedIndex = 0;
+    //设置tabbar的位置
+    self.tabBar.itemPositioning = UITabBarItemPositioningCentered;
     self.tabBar.backgroundImage = [self imageWithColor:[UIColor colorWithRed:1 green:1 blue:1 alpha:0]];
     
 }

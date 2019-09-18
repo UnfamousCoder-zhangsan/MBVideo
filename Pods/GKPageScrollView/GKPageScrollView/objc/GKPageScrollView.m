@@ -118,6 +118,9 @@ NO)
 }
 
 - (void)reloadData {
+    //关闭闪烁动画
+    //[UIView setAnimationsEnabled:NO];
+    
     self.isLoaded = YES;
     
     for (id<GKPageListViewDelegate> list in self.validListDict.allValues) {
@@ -134,6 +137,7 @@ NO)
     
     [self.mainTableView reloadData];
 }
+
 
 - (void)horizonScrollViewWillBeginScroll {
     self.mainTableView.scrollEnabled = NO;
