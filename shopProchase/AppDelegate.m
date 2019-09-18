@@ -27,6 +27,7 @@
     
 //    MBMineViewController *mainPage = [[MBMineViewController alloc] init];
 //    MenuViewController   *menuPage = [[MenuViewController    alloc] init];
+
 //
 //    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:mainTab];
 //
